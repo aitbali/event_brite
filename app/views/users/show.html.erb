@@ -1,7 +1,20 @@
 <div class="container">
 	<div class="center jumbotron">
 		<h1>Coucou <%= @user.name %>  ! </h1> <br><br>
-		<h2>Crée ton evenement !</h2>
+		<h1>Crée ton evenement !</h1>
 		<%= link_to 'ici', new_event_path  %>
-	</div>
+		
+		<h2> voici tes evenements </h2>
+				
+		<p><% @user.created_events.each do |ev| %></p>
+		<h2>Evenement :</h2>
+		<h2><%= ev.description %></h2>
+		<h2>Endroit :</h2>
+		<h2><%= ev.place %></h2>
+		<h2>Date :</h2>
+		<h2><%= ev.date %></h2>
+		<% end %>
+
+	</div> 
+
 </div>

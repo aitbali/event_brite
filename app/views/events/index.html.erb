@@ -1,0 +1,10 @@
+<h1>Events#edit</h1>
+<p><%= @event.each do |ev| %></p>
+		<h3>Evenement :</h3>
+		<h3><%= ev.description %></h3>
+		<h3>Endroit :</h3>
+		<h3><%= ev.place %></h3>
+		<h3>Date :</h3>
+		<h3><%= ev.date %></h3><br>
+<% end %>
+<h2> retour à l accueil </h2><%= link_to 'Accueil!', root_path %></h2>

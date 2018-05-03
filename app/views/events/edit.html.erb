@@ -1,2 +1,9 @@
 <h1>Events#edit</h1>
-<p>Find me in app/views/events/edit.html.erb</p>
+<p><%= @event.each do |ev| %></p>
+		<h3>Evenement :</h3>
+		<h3><%= @event.description %></h3>
+		<h3>Endroit :</h3>
+		<h3><%= @event.place %></h3>
+		<h3>Date :</h3>
+		<h3><%= @event.date %></h3>
+<% end %>

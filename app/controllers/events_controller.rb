@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   end
 
   def create
+  	
   	@event = Event.create(description: params[:description],date: params[:date],place: params[:place])
   	@event.creator_id = current_user.id
     if @event.save
@@ -15,7 +16,7 @@ class EventsController < ApplicationController
   end
 
   def edit
-  	
+  	@event = Event.find(params[:id])	
   end
 
   def show
@@ -24,4 +25,11 @@ class EventsController < ApplicationController
 
   def destroy
   end
+
+
+  def index
+  	@event = Event.all
+  end
+
+
 end

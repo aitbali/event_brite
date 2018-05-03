@@ -1,11 +1,15 @@
 <div class="container">
 	<div class="center jumbotron">
 		<h1>Evenement :</h1>
-		<h1><%= @event.description %></h1> <br><br>
-		<h2>Endroit :</h2>
-		<h2><%= @event.place %></h2>
-		<h2>Date :</h2>
-		<h2><%= @event.date %></h2>
+		<h1><%= @event.description %></h1>
+		<h1>Endroit :</h1>
+		<h1><%= @event.place %></h1>
+		<h1>Date :</h1>
+		<h1><%= @event.date %></h1>
 		<%=   %>
-	</div>
+		<%=  %>
+	<h2> pour voir tous les evenements </h2><%= link_to 'Liste!', events_path %></h2>
+	<h2> retour à l accueil </h2><%= link_to 'Accueil!', root_path %></h2>
+
+	<div>
 </div>

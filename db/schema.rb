@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_05_03_131426) do
 
-  create_table "attendees_events", id: false, force: :cascade do |t|
-    t.integer "event_id", null: false
-    t.integer "attendee_id", null: false
-  end
-
   create_table "events", force: :cascade do |t|
     t.string "description"
     t.datetime "date"
@@ -24,6 +19,11 @@ ActiveRecord::Schema.define(version: 2018_05_03_131426) do
     t.integer "creator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
