@@ -1,0 +1,10 @@
+<%=  form_tag :action => :create , method: :post do %>
+<br><br><br>
+<%= label_tag :description, 'description' %><br>
+<%= text_field_tag 'description', '', size: 75 %><br><br>
+<%= label_tag :place, 'place' %><br>
+<%= text_field_tag 'place' %><br><br>
+<%= label_tag :date, 'date' %><br>
+<%= date_field_tag 'date' %><br><br>
+<%= submit_tag 'Submit' %>
+<% end %>
