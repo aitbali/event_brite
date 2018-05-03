@@ -1,4 +1,7 @@
-<%=  form_tag :action => :create do %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<font size="15">
+  	<%=  form_tag :action => :create do %>
 
 <%= label_tag :name, 'Type your name' %><br>
 <%= text_field_tag :name %><br><br>
@@ -7,3 +10,5 @@
 <p> <%= link_to "Sign in!", sessions_new_path %></p>
 
 <% end %>
+</div>
+</div>

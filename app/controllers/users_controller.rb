@@ -13,12 +13,17 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to user_path(@user)
     else
-      render 'home'
+      render 'error'
     end
   end
 
   def show
  @user = User.find(params[:id])
+
+  end
+
+  def error
+  	redirect to user_error
 
   end
 end
