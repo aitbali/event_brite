@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+https://gentle-depths-83476.herokuapp.com/ # eventbrite
